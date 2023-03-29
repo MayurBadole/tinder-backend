@@ -24,6 +24,7 @@ app.get("/", (req, res) => res.status(200).send("hello"));
 
 app.post("/tinder/cards", (req, res) => {
   const dbCard = req.body;
+
   Cards.create(dbCard)
   .then((data)=>{
     res.status(201).send(data);
